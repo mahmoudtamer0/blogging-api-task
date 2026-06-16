@@ -1,5 +1,7 @@
 # Blogging API
 
+postman url : https://www.postman.com/mahmoudtamer0-8816438/workspace/default-workspace/collection/50295562-81dcc2f3-110a-4264-bc2b-172f0a00425a?
+
 A simple blogging REST API built with Node.js, Express and PostgreSQL.
 
 ## Why PostgreSQL?
@@ -14,7 +16,10 @@ made more sense than MongoDB for this use case.
 2. Create a .env file in the root with these values:
 
    PORT=3000
+   
 DB_URL=postgresql://neondb_owner:npg_K6Nqwh0pjSsT@ep-solitary-leaf-asfhzyop-pooler.c-4.eu-central-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+
+
 JWT_SECRET=blogging_api@123211dedqdhq81321
 
     Database URL is the URL is my PostgreSQL database hosted on AWS RDS.
@@ -37,9 +42,20 @@ JWT_SECRET=blogging_api@123211dedqdhq81321
 | DELETE | /posts/:id     | Yes    | Delete your post         |
 
 For protected routes, send the token in the Authorization header:
+
+action=share&source=copy-link&creator=50295562
 Authorization: Bearer your_token_here
 
 ## Notes
 - Passwords are hashed using bcrypt
 - JWT expires in 7 days
 - You can only edit or delete posts you created
+
+
+postman url : https://www.postman.com/mahmoudtamer0-8816438/workspace/default-workspace/collection/50295562-81dcc2f3-110a-4264-bc2b-172f0a00425a?
+
+## Author
+
+**Mahmoud Tamer** — Full-Stack Developer (Node.js / TypeScript / React.js / PostgreSQL)
+
+📬 mahmoud.tamer.developer@gmail.com · 🌐 [Portfolio](https://mahmoud-tamer-portfolio.vercel.app/) · 💻 [GitHub](https://github.com/mahmoudtamer0)
