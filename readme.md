@@ -1,5 +1,7 @@
 # Blogging API
 
+postman url : https://www.postman.com/mahmoudtamer0-8816438/workspace/default-workspace/collection/50295562-81dcc2f3-110a-4264-bc2b-172f0a00425a?
+
 A simple blogging REST API built with Node.js, Express and PostgreSQL.
 
 ## Why PostgreSQL?
@@ -41,11 +43,19 @@ JWT_SECRET=blogging_api@123211dedqdhq81321
 
 For protected routes, send the token in the Authorization header:
 
-
-postman url : https://www.postman.com/mahmoudtamer0-8816438/workspace/default-workspace/collection/50295562-81dcc2f3-110a-4264-bc2b-172f0a00425a?action=share&source=copy-link&creator=50295562
+action=share&source=copy-link&creator=50295562
 Authorization: Bearer your_token_here
 
 ## Notes
 - Passwords are hashed using bcrypt
 - JWT expires in 7 days
 - You can only edit or delete posts you created
+
+
+postman url : https://www.postman.com/mahmoudtamer0-8816438/workspace/default-workspace/collection/50295562-81dcc2f3-110a-4264-bc2b-172f0a00425a?
+
+## Author
+
+**Mahmoud Tamer** — Full-Stack Developer (Node.js / TypeScript / React.js / PostgreSQL)
+
+📬 mahmoud.tamer.developer@gmail.com · 🌐 [Portfolio](https://mahmoud-tamer-portfolio.vercel.app/) · 💻 [GitHub](https://github.com/mahmoudtamer0)
