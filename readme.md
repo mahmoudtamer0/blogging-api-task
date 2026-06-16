@@ -40,6 +40,9 @@ JWT_SECRET=blogging_api@123211dedqdhq81321
 | DELETE | /posts/:id     | Yes    | Delete your post         |
 
 For protected routes, send the token in the Authorization header:
+
+
+postman url : https://www.postman.com/mahmoudtamer0-8816438/workspace/default-workspace/collection/50295562-81dcc2f3-110a-4264-bc2b-172f0a00425a?action=share&source=copy-link&creator=50295562
 Authorization: Bearer your_token_here
 
 ## Notes
