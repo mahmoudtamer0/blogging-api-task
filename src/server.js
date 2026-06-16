@@ -1,5 +1,3 @@
-// src/server.js
-
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
@@ -18,7 +16,6 @@ server.use(express.urlencoded({ extended: true }));
 server.use("/auth", authRoutes);
 server.use("/posts", postsRoutes);
 
-// root endpoint
 server.get("/", (req, res) => {
     res.status(200).json({
         success: true,
