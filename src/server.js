@@ -1,9 +1,12 @@
-import express from "express";
-import cors from "cors";
-import helmet from "helmet";
-import pool from "./db.js";
+// src/server.js
 
-
+require("dotenv").config();
+const express = require("express");
+const cors = require("cors");
+const helmet = require("helmet");
+const pool = require("./config/db");
+const authRoutes = require("./routes/auth.routes");
+const postsRoutes = require("./routes/posts.routes");
 
 const server = express();
 
@@ -12,28 +15,36 @@ server.use(cors());
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 
-import authRoutes from "./routes/auth.js";
-import postsRoutes from "./routes/posts.js";
-
 server.use("/auth", authRoutes);
 server.use("/posts", postsRoutes);
 
-const PORT = process.env.PORT || 3000;
-
-server.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+// root endpoint
+server.get("/", (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: "Blogging API is running 🚀",
+        endpoints: {
+            register: "POST /auth/register",
+            login: "POST /auth/login",
+            getAllPosts: "GET /posts",
+            createPost: "POST /posts",
+            updatePost: "PUT /posts/:id",
+            deletePost: "DELETE /posts/:id",
+        },
+    });
 });
 
+const PORT = process.env.PORT || 3000;
+
 pool.connect()
-    .then(client => {
+    .then((client) => {
         client.release();
         console.log("✅ PostgreSQL Connected");
-
         server.listen(PORT, () => {
             console.log(`🚀 Server running on port ${PORT}`);
         });
     })
-    .catch(err => {
+    .catch((err) => {
         console.error("❌ PostgreSQL connection failed:", err);
         process.exit(1);
     });
