@@ -14,7 +14,10 @@ made more sense than MongoDB for this use case.
 2. Create a .env file in the root with these values:
 
    PORT=3000
+   
 DB_URL=postgresql://neondb_owner:npg_K6Nqwh0pjSsT@ep-solitary-leaf-asfhzyop-pooler.c-4.eu-central-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+
+
 JWT_SECRET=blogging_api@123211dedqdhq81321
 
     Database URL is the URL is my PostgreSQL database hosted on AWS RDS.
