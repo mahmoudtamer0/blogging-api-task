@@ -2,9 +2,9 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
-import pool from "./config/db.js";
-import authRoutes from "./routes/auth.routes.js";
-import postsRoutes from "./routes/posts.routes.js";
+import pool from "./db.js";
+import authRoutes from "./routes/auth.js";
+import postsRoutes from "./routes/posts.js";
 
 const server = express();
 
