@@ -1,10 +1,10 @@
-require("dotenv").config();
-const express = require("express");
-const cors = require("cors");
-const helmet = require("helmet");
-const pool = require("./config/db");
-const authRoutes = require("./routes/auth.routes");
-const postsRoutes = require("./routes/posts.routes");
+import "dotenv/config";
+import express from "express";
+import cors from "cors";
+import helmet from "helmet";
+import pool from "./config/db.js";
+import authRoutes from "./routes/auth.routes.js";
+import postsRoutes from "./routes/posts.routes.js";
 
 const server = express();
 
